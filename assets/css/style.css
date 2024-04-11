@@ -1,0 +1,76 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(129,241,255);
+background: linear-gradient(180deg, rgba(129,241,255,1) 0%, rgba(160,222,134,1) 68%, rgba(32,62,86,1) 87%, rgba(26,53,73,1) 100%);
+}
+
+  .header {
+    font-family: "roboto", sans-serif;
+    font-size: 3rem;
+    background: #737373;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.form-label {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#searchQuery {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.69rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.5px;
+}
+
+.today-container {
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.today-weather-card {
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.6);
+}
+
+#todayWeatherIcon {
+  max-width: 100px;
+  height: auto;
+  padding: 0;
+}
+
+
+.weather-card {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-color: #737373;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.3);
+}
+
+footer {
+  font-family: "roboto", sans-serif;
+    font-size: 1.69rem;
+    background: #737373;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

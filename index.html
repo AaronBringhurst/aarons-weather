@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        />
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Aarons Weather</title>
+    </head>
+    <body>
+
+        <!--Site Header -->
+        <header class="p-3 mb-3 text-center header">
+            <h1>Aarons Weather</h1>
+        </header>
+
+        <!--Main Site -->
+        <div id="site-body" class="container align-items-center" style="height: 100vh;">
+
+            <!--Search Fourm -->
+            <div class="container mt-5">
+                    <form id="weatherForm">
+                        <label class="form-label">SEARCH FOR A CITY:</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="searchQuery" aria-describedby="citySearch">
+                            <button type="submit" class="btn btn-primary m-3">Search</button>
+                        </div>
+                    </form>
+                        <div id="previousSearches" class="d-flex flex-wrap justify-content-center"></div>
+                        <div id="clearSearches" class="d-flex flex-wrap justify-content-center"></div>
+            </div>
+
+            <!--today's weather -->
+                <div class="container p-4" id="today-container"></div>
+
+            <!--5 day forecast -->
+                <div class="container d-flex justify-content-around p-2" id="forecast-container"></div>
+        </div>
+
+        <footer class="p-4 text-center">
+            <ul class="social-links">
+                <li><a href="https://github.com/AaronBringhurst" target="_blank">Github</a></li>
+                <li><a href="mailto:bringhurst.aaron@gmail.com">bringhurst.aaron@gmail.com</a></li>
+            </ul>
+        </footer>
+
+        <!--scripts used-->  
+        <script
+        src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"
+        ></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous">
+        </script>
+        <!--Main Site -->
+    </body>
+</html>
