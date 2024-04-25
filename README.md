@@ -7,12 +7,16 @@ Description
 • Aarons Weather is a simple, user-friendly web application that provides real-time weather updates for any city. The website utilizes OpenWeatherMap's API to fetch weather data, including today's weather conditions and a 5-day forecast.
 
 Link to Deployed Application.
+• [https://aaronbringhurst.github.io/aarons-weather/]
+Link to GitHub Repo.
 • [https://github.com/AaronBringhurst/aarons-weather]
 
 # Screenshots
 
-![Alt text](/screenshots/aaronweather1.png)
-![Alt text](/screenshots/aaronweather2.png)
+
+![Aaron's Weather Screenshot 1](screenshots/aaronweather1.png)
+![Aaron's Weather Screenshot 2](screenshots/aaronweather2.png)
+
 
 ## Table of Contents
 
@@ -129,3 +133,9 @@ For any questions or suggestions, please contact:
 
 - Aaron Bringhurst - [bringhurst.aaron@gmail.com](mailto:bringhurst.aaron@gmail.com)
 - GitHub: [https://github.com/AaronBringhurst](https://github.com/AaronBringhurst)
+
+Link to Deployed Application.
+• [https://aaronbringhurst.github.io/aarons-weather/]
+Link to GitHub Repo.
+• [https://github.com/AaronBringhurst/aarons-weather]
+
