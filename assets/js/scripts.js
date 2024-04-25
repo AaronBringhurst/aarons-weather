@@ -1,9 +1,6 @@
 const apiKey = '933e65b5e1b17373569ee1725fcc63ec';
 
-function getInputValue() {
-    return $('#searchQuery').val();
-}
-
+// Convert wind speed from meters per second to miles per hour and determine the cardinal direction.
 function convertWind(speedInMeters, degrees) {
     const speedMph = Math.round(speedInMeters * 2.23694);
     const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
@@ -14,6 +11,7 @@ function convertWind(speedInMeters, degrees) {
     };
 }
 
+// Save a new search query to local storage if it's not already stored.
 function saveSearchQuery(query) {
     let searches = JSON.parse(localStorage.getItem('searches')) || [];
     if (!searches.includes(query)) {
@@ -22,6 +20,7 @@ function saveSearchQuery(query) {
     }
 }
 
+// Clear all search history from local storage and update the UI.
 function clearSearches() {
     let buttonContainer =$('#clearSearches');
     let button = $('<button> justify-content-center')
@@ -36,6 +35,7 @@ function clearSearches() {
     buttonContainer.append(button);
 }
 
+// Create buttons for each stored search query to allow easy re-searching.
 function makeSearchButtons() {
     let searches = JSON.parse(localStorage.getItem('searches')) || [];
     let buttonContainer = $('#previousSearches');
@@ -52,6 +52,7 @@ function makeSearchButtons() {
     });
 }
 
+// Fetch location data from OpenWeatherMap API based on city name.
 async function getUserLocation (city,) {
     const location = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
     
@@ -64,6 +65,7 @@ async function getUserLocation (city,) {
     }
 }
 
+// Fetch today's weather data using latitude and longitude.
 async function getTodayForecast(lat, lon) {
     const weather = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
 
@@ -77,6 +79,7 @@ async function getTodayForecast(lat, lon) {
     }
 }
 
+// Fetch a 5-day weather forecast using latitude and longitude.
 async function getWeatherForecast(lat, lon) {
     const weather = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
 
@@ -89,6 +92,7 @@ async function getWeatherForecast(lat, lon) {
     }
 }
 
+// Create and display a weather card for today's weather data.
 function createTodayWeatherCard(forecast) {
     const cityName = forecast.name
     const tempFahrenheit = Math.floor((forecast.main.temp - 273.15) * 9 / 5 + 32);
@@ -125,6 +129,7 @@ function createTodayWeatherCard(forecast) {
 $('#today-container').append(cardHtml);
 }
 
+// Create and display weather cards for a 5-day forecast.
 function createWeatherCard(forecast) {
     console.log(forecast)
     const tempFahrenheit = Math.floor((forecast.main.temp - 273.15) * 9 / 5 + 32);
@@ -153,10 +158,7 @@ function createWeatherCard(forecast) {
     $('#forecast-container').append(cardHtml);
 }
 
-/**
- * 
- * @param event This is a standard click event 
- */
+// Handles user input for city searches, fetches location and weather data, and updates UI.
 async function handleUserInput(event) {
     event.preventDefault();
     const query = $('#searchQuery').val().trim();
@@ -186,6 +188,7 @@ async function handleUserInput(event) {
         }
 }
 
+// Initialize the application and add event listeners when the document is ready.
 $(document).ready(function(event) {
     $('#weatherForm').on('submit', handleUserInput);
     makeSearchButtons();
